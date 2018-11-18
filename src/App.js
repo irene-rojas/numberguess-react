@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import RandomNumber from "./components/RandomNumber/RandomNumber";
+import Buttons from "./components/Buttons/Buttons";
 
 class App extends Component {
+
+  state = {
+    // random: "",
+    currentValue: 0,
+    gameScore: 0,
+    totalScore: 0
+  };
+
+  // componentDidMount() {
+  //   console.log(this.state.random);
+  // }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+
+        <RandomNumber />
+
+        <Buttons />
+
+
       </div>
     );
   }
