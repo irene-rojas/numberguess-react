@@ -16,7 +16,7 @@ import React from "react";
 const Button = (props) => {
 
     return (
-    <div>
+    <div id="individualButton">
         {/* set onClick to add value */}
             <img 
                 src={props.src}
