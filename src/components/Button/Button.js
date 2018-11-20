@@ -4,9 +4,10 @@ import "./button.css";
 
 const Button = (props) => {
 
+    {/* set onClick to add value */}
+
     return (
-    <div className="individualButton">
-        {/* set onClick to add value */}
+
         <a href="#">
             <img 
                 src={props.src}
@@ -14,7 +15,7 @@ const Button = (props) => {
                 value={props.value}
             />
         </a>
-    </div>
+        
     )
 
 }

@@ -15,15 +15,12 @@ class App extends Component {
 
   render() {
     return (
+      
       <div className="App">
 
-      <div id="randomNumber">
-        <RandomNumber />
-      </div>
+        <RandomNumber className="randomNumber"/>
 
-      <div id="buttons">
-        <Buttons />
-      </div>
+        <Buttons className="buttons"/>
 
 
       </div>

@@ -7,7 +7,6 @@ import gray from "../Button/images/gray_cat.png";
 import yellow from "../Button/images/yellow_cat.png";
 
 
-
 class Buttons extends Component {
 
     state = {
@@ -68,6 +67,7 @@ class Buttons extends Component {
                         />
                     )
                 })}
+                
             </div>
         )
     }
