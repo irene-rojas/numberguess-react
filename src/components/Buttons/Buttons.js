@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import Button from "../Button/Button";
 // import images from "../Button/images";
-import blue from "../Button/images/blue_btn.png";
-import green from "../Button/images/green_btn.png";
-import red from "../Button/images/red_btn.png";
-import yellow from "../Button/images/yellow_btn.png";
+import black from "../Button/images/black_cat.png";
+import brown from "../Button/images/brown_cat.png";
+import gray from "../Button/images/gray_cat.png";
+import yellow from "../Button/images/yellow_cat.png";
+
 
 
 class Buttons extends Component {
@@ -12,21 +13,21 @@ class Buttons extends Component {
     state = {
         buttons: [
             {
-                id: "blue",
-                src: blue,
-                alt: "blueBtn",
+                id: "black",
+                src: black,
+                alt: "blackBtn",
                 value: ""
             },
             {
-                id: "green",
-                src: green,
-                alt: "greenBtn",
+                id: "brown",
+                src: brown,
+                alt: "brownBtn",
                 value: ""
             },
             {
-                id: "red",
-                src: red,
-                alt: "redBtn",
+                id: "gray",
+                src: gray,
+                alt: "grayBtn",
                 value: ""
             },
             {
@@ -45,7 +46,7 @@ class Buttons extends Component {
         });
         console.log(rndNumBtn);
 
-        return rndNumBtn
+        // return rndNumBtn
       };
      
       componentDidMount() {
@@ -55,7 +56,7 @@ class Buttons extends Component {
 
     render() {
         return (
-            <div>
+            <div className="imageGrid">
 
                 {this.state.buttons.map(button => {
                     return (
@@ -63,7 +64,7 @@ class Buttons extends Component {
                             key={button.id}
                             src={button.src}
                             value={button.value}
-                            onLoad={this.generateNumber}
+                            componentDidMount={this.generateNumber}
                         />
                     )
                 })}

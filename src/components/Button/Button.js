@@ -1,9 +1,11 @@
 import React from "react";
+import "./button.css";
+
 
 const Button = (props) => {
 
     return (
-    <div id="individualButton">
+    <div className="individualButton">
         {/* set onClick to add value */}
         <a href="#">
             <img 

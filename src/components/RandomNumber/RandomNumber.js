@@ -23,8 +23,8 @@ class RandomNumber extends Component {
 
       render() {
         return (
-          <div id="generator">
-            <p id="rNum">Random number = {this.state.number}</p>
+          <div className="generator">
+            <p className="rNum">Random number = {this.state.number}</p>
           </div>
         );
       }

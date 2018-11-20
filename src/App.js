@@ -17,9 +17,13 @@ class App extends Component {
     return (
       <div className="App">
 
+      <div id="randomNumber">
         <RandomNumber />
+      </div>
 
+      <div id="buttons">
         <Buttons />
+      </div>
 
 
       </div>
