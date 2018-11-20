@@ -46,10 +46,6 @@ class Buttons extends Component {
         return (
             <div>
 
-                {/* <Button src={this.state.buttons[2].src}/> */}
-                {/* <Button src={blue}/> */}
-
-
                 {this.state.buttons.map(button => {
                     return (
                         <Button
