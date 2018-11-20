@@ -11,12 +11,15 @@ class RandomNumber extends Component {
         this.setState({
           number: rndNum
         });
+        console.log(rndNum);
+
         return rndNum
       };
      
       componentDidMount() {
           this.generateNumber(19, 120)
       }  
+      
 
       render() {
         return (

@@ -36,9 +36,23 @@ class Buttons extends Component {
                 alt: "yellowBtn",
                 value: ""
             }
-        ]
+        ],
+        btnNumber: 0
     };
 
+    generateNumber = (min, max) => {
+        const rndNumBtn = Math.floor(Math.random()*(max-min+1)+min);
+        this.setState({
+          btnNumber: rndNumBtn
+        });
+        console.log(rndNumBtn);
+
+        return rndNumBtn
+      };
+     
+    //   componentDidMount() {
+    //       this.generateNumber(19, 120)
+    //   }  
 
     // Or does Math.Random go here as componentDidMount?
 
@@ -52,6 +66,7 @@ class Buttons extends Component {
                             key={button.id}
                             src={button.src}
                             value={button.value}
+                            generateNumber={this.generateNumber}
                         />
                     )
                 })}
