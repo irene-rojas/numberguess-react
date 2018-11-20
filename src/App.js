@@ -12,9 +12,6 @@ class App extends Component {
     totalScore: 0
   };
 
-  // componentDidMount() {
-  //   console.log(this.state.random);
-  // }
 
   render() {
     return (

@@ -9,8 +9,6 @@ import React from "react";
 //     "green": green
 // };
 
-// const images = require("./images");
-
 // OBJECTS in state that link to image
 
 const Button = (props) => {

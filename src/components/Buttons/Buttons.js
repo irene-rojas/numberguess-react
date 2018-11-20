@@ -13,26 +13,26 @@ class Buttons extends Component {
         buttons: [
             {
                 id: "blue",
-                src: { blue },
+                src: blue,
                 alt: "blueBtn",
                 value: ""
                 // I think Math.random goes here
             },
             {
                 id: "green",
-                src: { green },
+                src: green,
                 alt: "greenBtn",
                 value: ""
             },
             {
                 id: "red",
-                src: { red },
+                src: red,
                 alt: "redBtn",
                 value: ""
             },
             {
                 id: "yellow",
-                src: { yellow },
+                src: yellow,
                 alt: "yellowBtn",
                 value: ""
             }
@@ -46,7 +46,9 @@ class Buttons extends Component {
         return (
             <div>
 
-                {/* <Button src={red}/> */}
+                {/* <Button src={this.state.buttons[2].src}/> */}
+                {/* <Button src={blue}/> */}
+
 
                 {this.state.buttons.map(button => {
                     return (
