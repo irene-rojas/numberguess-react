@@ -35,14 +35,13 @@ class Buttons extends Component {
                 alt: "yellowBtn",
                 value: ""
             }
-        ],
-        btnNumber: 0
+        ]
     };
 
     generateNumber = (min, max) => {
         const rndNumBtn = Math.floor(Math.random()*(max-min+1)+min);
         this.setState({
-          btnNumber: rndNumBtn
+          value: rndNumBtn
         });
         console.log(rndNumBtn);
 
