@@ -15,13 +15,20 @@ class App extends Component {
 
   render() {
     return (
-      
+
       <div className="App">
 
-        <RandomNumber className="randomNumber"/>
+      <div className="randomNumber">
+        <RandomNumber />
+      </div>
 
-        <Buttons className="buttons"/>
+      <div className="buttonGrid">
+        <Buttons />
+      </div>
 
+      {/* <div className="instructions">
+        Note the randomly generated number in XXX. Each of cats has been randomly assigned a number. Click them to reach your target score.
+      </div> */}
 
       </div>
     );

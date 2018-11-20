@@ -55,7 +55,7 @@ class Buttons extends Component {
 
     render() {
         return (
-            <div className="imageGrid">
+            <div>
 
                 {this.state.buttons.map(button => {
                     return (
@@ -67,7 +67,7 @@ class Buttons extends Component {
                         />
                     )
                 })}
-                
+
             </div>
         )
     }

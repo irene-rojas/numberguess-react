@@ -1,6 +1,0 @@
-.imageGrid {
-    display: grid;
-    grid-template-rows: 200px;
-    grid-template-columns: 1fr;
-}
-
