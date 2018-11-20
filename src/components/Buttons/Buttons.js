@@ -16,7 +16,6 @@ class Buttons extends Component {
                 src: blue,
                 alt: "blueBtn",
                 value: ""
-                // I think Math.random goes here
             },
             {
                 id: "green",
@@ -54,7 +53,6 @@ class Buttons extends Component {
           this.generateNumber(1, 12)
       }  
 
-    // Or does Math.Random go here as componentDidMount?
 
     render() {
         return (
@@ -66,7 +64,7 @@ class Buttons extends Component {
                             key={button.id}
                             src={button.src}
                             value={button.value}
-                            generateNumber={this.generateNumber}
+                            onLoad={this.generateNumber}
                         />
                     )
                 })}
