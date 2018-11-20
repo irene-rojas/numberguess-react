@@ -50,9 +50,9 @@ class Buttons extends Component {
         return rndNumBtn
       };
      
-    //   componentDidMount() {
-    //       this.generateNumber(19, 120)
-    //   }  
+      componentDidMount() {
+          this.generateNumber(1, 12)
+      }  
 
     // Or does Math.Random go here as componentDidMount?
 
@@ -77,8 +77,6 @@ class Buttons extends Component {
 
 
 }
-
-
 
 
 export default Buttons;
