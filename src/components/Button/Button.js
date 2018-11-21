@@ -7,9 +7,8 @@ const Button = (props) => {
 
   return (
 
-    <button>
+    <button className="zoom">
       <img
-        className="zoom"
         src={props.src}
         alt={props.alt}
         value={props.value}
