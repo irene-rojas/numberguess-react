@@ -5,6 +5,13 @@ import Buttons from "./components/Buttons/Buttons";
 
 
 class App extends Component {
+  constructor( props ) {
+    super( props );
+
+    // since you're using this method in a callback, don't forget to
+    // bind the this context
+    this.handleBtnClick = this.handleBtnClick.bind( this );
+}
 
   state = {
     randomNumber: RandomNumber,
@@ -15,10 +22,8 @@ class App extends Component {
   
   // do I setState to a new currentValue each time the buttons are clicked?
   // need handleBtnClick function
-  handleBtnClick = (event) => {
-    this.setState({
-      currentValue: this.state.currentValue + 5
-    })
+  handleBtnClick() {
+    console.log("meow");
   }
 
   render() {
@@ -32,7 +37,7 @@ class App extends Component {
       </div>
 
       <div className="buttonGrid">
-        <Buttons />
+        <Buttons onClick={this.handleBtnClick}/>
       </div>
 
       <div className="currentValue">
