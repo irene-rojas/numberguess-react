@@ -24,7 +24,7 @@ class RandomNumber extends Component {
       render() {
         return (
           <div className="generator">
-            <p className="rNum">Random number = {this.state.number}</p>
+            <p className="rNum">Target number = {this.state.number}</p>
           </div>
         );
       }

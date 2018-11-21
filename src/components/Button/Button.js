@@ -1,14 +1,13 @@
 import React from "react";
-import "./button.css";
+import "./Button.css";
 
 
 const Button = (props) => {
 
-    {/* set onClick to add value */}
 
     return (
 
-        <a href="#">
+        <a href="http://localhost:3000/">
             <img 
                 src={props.src}
                 alt={props.alt}
