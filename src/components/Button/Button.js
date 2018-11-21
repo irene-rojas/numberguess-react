@@ -5,17 +5,16 @@ import "./Button.css";
 const Button = (props) => {
 
 
-    return (
+  return (
 
-        <a href="http://localhost:3000/">
-            <img 
-                src={props.src}
-                alt={props.alt}
-                value={props.value}
-            />
-        </a>
-        
-    )
+    <button>
+      <img
+        src={props.src}
+        alt={props.alt}
+        value={props.value}
+      />
+    </button>
+  )
 
 }
 

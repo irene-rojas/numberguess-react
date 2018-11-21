@@ -43,7 +43,6 @@ class Buttons extends Component {
         ]
     };
 
-
     render() {
         return (
             <div>
@@ -51,10 +50,11 @@ class Buttons extends Component {
                 {this.state.buttons.map(button => {
                     return (
                         <Button
-                            key={button.id}
-                            src={button.src}
-                            alt={button.alt}
-                            value={button.value}
+                          className={button.id}
+                          key={button.id}
+                          src={button.src}
+                          alt={button.alt}
+                          value={button.value}
                         />
                     )
                 })}

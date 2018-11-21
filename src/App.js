@@ -3,6 +3,7 @@ import './App.css';
 import RandomNumber from "./components/RandomNumber/RandomNumber";
 import Buttons from "./components/Buttons/Buttons";
 
+
 class App extends Component {
 
   state = {
@@ -12,10 +13,16 @@ class App extends Component {
     totalScore: 0,
   };
   
-
   // do I setState to a new currentValue each time the buttons are clicked?
+  // need handleBtnClick function
+  handleBtnClick = (event) => {
+    this.setState({
+      currentValue: this.state.currentValue + 5
+    })
+  }
 
   render() {
+
     return (
 
       <div className="App">
@@ -26,6 +33,10 @@ class App extends Component {
 
       <div className="buttonGrid">
         <Buttons />
+      </div>
+
+      <div className="currentValue">
+        Current value = {this.state.currentValue}
       </div>
 
       {/* <div className="instructions">

@@ -4,7 +4,13 @@ img {
     padding-right: 5px;
 }
 
-
+button {
+  background-color: transparent;
+  /* background-repeat: no-repeat; */
+  outline: none;
+  border: none;
+  /* overflow: hidden; */
+}
 
 
 /* <a href='https://www.freepik.com/free-vector/lovely-collection-of-watercolor-kittens_1233230.htm'>Designed by Freepik</a> */
