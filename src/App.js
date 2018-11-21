@@ -6,7 +6,7 @@ import Buttons from "./components/Buttons/Buttons";
 class App extends Component {
 
   state = {
-    randomNumber: {RandomNumber},
+    randomNumber: RandomNumber,
     currentValue: 0,
     gameScore: 0,
     totalScore: 0,
