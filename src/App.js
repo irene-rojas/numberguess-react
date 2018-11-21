@@ -22,7 +22,8 @@ class App extends Component {
   
   // do I setState to a new currentValue each time the buttons are clicked?
   // need handleBtnClick function
-  handleBtnClick() {
+  handleBtnClick = (event) => {
+    event.preventDefault();
     console.log("meow");
   }
 

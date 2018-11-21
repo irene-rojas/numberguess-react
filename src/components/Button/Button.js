@@ -9,6 +9,7 @@ const Button = (props) => {
 
     <button>
       <img
+        className="zoom"
         src={props.src}
         alt={props.alt}
         value={props.value}

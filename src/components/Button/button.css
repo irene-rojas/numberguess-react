@@ -10,5 +10,12 @@ button {
   border: none;
 }
 
+.zoom {
+  transition: .2s;
+}
+
+.zoom:hover {
+  transform: scale(1.02);
+}
 
 /* <a href='https://www.freepik.com/free-vector/lovely-collection-of-watercolor-kittens_1233230.htm'>Designed by Freepik</a> */
