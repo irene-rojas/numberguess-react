@@ -6,12 +6,14 @@ import Buttons from "./components/Buttons/Buttons";
 class App extends Component {
 
   state = {
-    // random: "",
+    randomNumber: {RandomNumber},
     currentValue: 0,
     gameScore: 0,
-    totalScore: 0
+    totalScore: 0,
   };
+  
 
+  // do I setState to a new currentValue each time the buttons are clicked?
 
   render() {
     return (
