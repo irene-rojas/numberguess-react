@@ -55,7 +55,6 @@ class Buttons extends Component {
                           src={button.src}
                           alt={button.alt}
                           value={button.value}
-                          onClick={this.handleClick}
                         />
                     )
                 })}
@@ -63,10 +62,6 @@ class Buttons extends Component {
             </div>
         )
     }
-
-
-
 }
-
 
 export default Buttons;
