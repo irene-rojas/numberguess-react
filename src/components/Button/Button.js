@@ -11,6 +11,7 @@ const Button = (props) => {
         src={props.src}
         alt={props.alt}
         value={props.value}
+        onClick={props.onClick}
       />
     </button>
   )
