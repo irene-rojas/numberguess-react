@@ -13,10 +13,17 @@ class App extends Component {
     totalScore: 0,
   };
   
-  handleClick = event => {
-    event.preventDefault();
-    console.log('meow');
-  }
+//   handleClick = event => {
+//     event.preventDefault();
+//     console.log("meow");
+//   }
+
+    handleClick = (event, value) => {
+        event.preventDefault();
+        const tempValue = value;
+        console.log(tempValue);
+
+    }
 
   render() {
     return (
