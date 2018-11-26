@@ -9,8 +9,7 @@ class App extends Component {
   state = {
     randomNumber: RandomNumber,
     currentValue: 0,
-    gameScore: 0,
-    // totalScore: 0,
+    gamesWon: 0,
   };
 
     handleClick = (event) => {
@@ -19,11 +18,24 @@ class App extends Component {
         const newValue = parseInt(event.target.getAttribute("value"));
         this.setState(
             {currentValue: currentValue + newValue}
-        );
-        console.log(newValue);
+        )
+        // console.log(newValue);
+        // code above works fine
+        let randomNumber = this.state.randomNumber;
+        if (currentValue === randomNumber) {
+            const gamesWon = this.state.gamesWon;
+            this.setState(
+                {gamesWon: gamesWon + 1}
+            )
+        }
+        if (currentValue >= randomNumber) {
+            this.setState(
+                {randomNumber: {RandomNumber}} 
+            )
+        }
     }
 
-// if (currentValue === randomNumber) { gameScore +1 } and reset game
+// if (currentValue === randomNumber) { gamesWon +1 } and reset game
 // if (currentValue > randomNumber ) {reset game}
 
   render() {
@@ -37,7 +49,7 @@ class App extends Component {
         <div className="currentValue">
             Current value = {this.state.currentValue}
             <br></br>
-            Games won = {this.state.gameScore}
+            Games won = {this.state.gamesWon}
         </div>
       </div>
 
