@@ -18,12 +18,10 @@ class App extends Component {
 //     console.log("meow");
 //   }
 
-    handleClick = (event, value) => {
-        event.preventDefault();
-        const tempValue = value;
-        console.log(tempValue);
-
+    handleClick = (props) => {
+        console.log(props);
     }
+
 
   render() {
     return (
@@ -32,15 +30,17 @@ class App extends Component {
 
       <div className="randomNumber">
         <RandomNumber />
+
+        <div className="currentValue">
+            Current value = {this.state.currentValue}
+        </div>
       </div>
 
       <div className="buttonGrid">
         <Buttons onClick={this.handleClick} />
       </div>
 
-      <div className="currentValue">
-        Current value = {this.state.currentValue}
-      </div>
+
 
       </div>
     );
