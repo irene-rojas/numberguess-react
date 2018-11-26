@@ -10,18 +10,21 @@ class App extends Component {
     randomNumber: RandomNumber,
     currentValue: 0,
     gameScore: 0,
-    totalScore: 0,
+    // totalScore: 0,
   };
-  
-//   handleClick = event => {
-//     event.preventDefault();
-//     console.log("meow");
-//   }
 
-    handleClick = (props) => {
-        console.log(props);
+    handleClick = (event) => {
+        event.preventDefault();
+        const currentValue = this.state.currentValue;
+        const newValue = parseInt(event.target.getAttribute("value"));
+        this.setState(
+            {currentValue: currentValue + newValue}
+        );
+        console.log(newValue);
     }
 
+// if (currentValue === randomNumber) { gameScore +1 } and reset game
+// if (currentValue > randomNumber ) {reset game}
 
   render() {
     return (
@@ -33,12 +36,18 @@ class App extends Component {
 
         <div className="currentValue">
             Current value = {this.state.currentValue}
+            <br></br>
+            Games won = {this.state.gameScore}
         </div>
       </div>
 
-      <div className="buttonGrid">
+      {/* <div className="buttonGrid">
         <Buttons onClick={this.handleClick} />
-      </div>
+      </div> */}
+
+        <div className="buttonGrid">
+            <Buttons onClick={this.handleClick} />
+        </div>
 
 
 
