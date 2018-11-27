@@ -28,15 +28,14 @@ class App extends Component {
                 {gamesWon: gamesWon + 1}
             )
         }
-        if (currentValue >= randomNumber) {
-            this.setState(
-                {randomNumber: {RandomNumber}} 
-            )
+        else {
+            if (currentValue >= randomNumber) {
+                this.setState(
+                    {randomNumber: RandomNumber}
+                )
+            }
         }
     }
-
-// if (currentValue === randomNumber) { gamesWon +1 } and reset game
-// if (currentValue > randomNumber ) {reset game}
 
   render() {
     return (
@@ -53,15 +52,9 @@ class App extends Component {
         </div>
       </div>
 
-      {/* <div className="buttonGrid">
-        <Buttons onClick={this.handleClick} />
-      </div> */}
-
         <div className="buttonGrid">
             <Buttons onClick={this.handleClick} />
         </div>
-
-
 
       </div>
     );
