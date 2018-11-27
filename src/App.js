@@ -28,24 +28,30 @@ class App extends Component {
         )
         // console.log(newValue);
         // code above works fine
-        if (this.state.currentValue === this.state.targetNumber) {
-            this.setState(
-                {
-                  targetNumber: this.targetNumber(19, 120),
-                  gamesWon: this.state.gamesWon + 1
-                }
-            )
-        }
-        else {
-            if (this.state.currentValue >= this.state.targetNumber) {
-                this.setState(
-                    {gamesWon: this.state.gamesWon - 1}
-                )
-            }
-        }
     }
 
+
   render() {
+    if (this.state.currentValue === this.state.targetNumber) {
+      this.setState(
+          {
+            targetNumber: this.targetNumber(19, 120),
+            currentValue: 0,
+            gamesWon: this.state.gamesWon + 1
+          }
+      )
+  }
+  else {
+      if (this.state.currentValue >= this.state.targetNumber) {
+          this.setState(
+              {
+                targetNumber: this.targetNumber(19, 120),
+                currentValue: 0,
+                gamesWon: this.state.gamesWon
+              }
+          )
+      }
+  }
     return (
 
       <div className="App">
