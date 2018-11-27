@@ -21,17 +21,15 @@ class App extends Component {
         )
         // console.log(newValue);
         // code above works fine
-        let randomNumber = this.state.randomNumber;
-        if (currentValue === randomNumber) {
-            const gamesWon = this.state.gamesWon;
+        if (this.state.currentValue === this.state.randomNumber) {
             this.setState(
-                {gamesWon: gamesWon + 1}
+                {gamesWon: this.state.gamesWon + 1}
             )
         }
         else {
-            if (currentValue >= randomNumber) {
+            if (this.state.currentValue >= this.state.randomNumber) {
                 this.setState(
-                    {randomNumber: RandomNumber}
+                    {gamesWon: this.state.gamesWon - 1}
                 )
             }
         }
