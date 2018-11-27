@@ -30,28 +30,37 @@ class App extends Component {
         // code above works fine
     }
 
-
-  render() {
-    if (this.state.currentValue === this.state.targetNumber) {
-      this.setState(
-          {
-            targetNumber: this.targetNumber(19, 120),
-            currentValue: 0,
-            gamesWon: this.state.gamesWon + 1
-          }
-      )
-  }
-  else {
-      if (this.state.currentValue >= this.state.targetNumber) {
-          this.setState(
-              {
-                targetNumber: this.targetNumber(19, 120),
-                currentValue: 0,
-                gamesWon: this.state.gamesWon
-              }
+    componentDidUpdate() {
+      if (this.state.currentValue === this.state.targetNumber) {
+        this.setState(
+            {
+              targetNumber: this.targetNumber(19, 120),
+              currentValue: 0,
+              gamesWon: this.state.gamesWon + 1
+            }
+        )
+          return (
+            <Buttons />
           )
       }
-  }
+      else {
+          if (this.state.currentValue >= this.state.targetNumber) {
+              this.setState(
+                  {
+                    targetNumber: this.targetNumber(19, 120),
+                    currentValue: 0,
+                    gamesWon: this.state.gamesWon
+                  }
+              )
+              return (
+                <Buttons />
+              )
+          }
+      }
+    }
+
+
+  render() {
     return (
 
       <div className="App">

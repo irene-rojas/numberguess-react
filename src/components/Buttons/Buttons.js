@@ -56,7 +56,6 @@ class Buttons extends Component {
                           alt={button.alt}
                           value={button.value}
                           onClick={this.props.onClick}
-                          handleClick={this.props.handleClick}
                         />
                     )
                 })}
