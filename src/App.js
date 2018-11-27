@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-// import RandomNumber from "./components/RandomNumber/RandomNumber";
 import Buttons from "./components/Buttons/Buttons";
 
 
@@ -65,8 +64,7 @@ class App extends Component {
 
       <div className="App">
 
-      <div className="randomNumber">
-        {/* <RandomNumber /> */}
+      <div className="targetNumber">
         Target number = {this.state.targetNumber}
 
         <div className="currentValue">
