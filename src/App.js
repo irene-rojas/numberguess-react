@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
-import RandomNumber from "./components/RandomNumber/RandomNumber";
+// import RandomNumber from "./components/RandomNumber/RandomNumber";
 import Buttons from "./components/Buttons/Buttons";
 
 
 class App extends Component {
 
+  targetNumber = (min, max) => {
+    const targetNum = Math.floor(Math.random()*(max-min+1)+min);
+    console.log(targetNum);
+
+    return targetNum
+  };
+
   state = {
-    randomNumber: RandomNumber,
+    targetNumber: this.targetNumber(19, 120),
     currentValue: 0,
     gamesWon: 0,
   };
@@ -21,13 +28,16 @@ class App extends Component {
         )
         // console.log(newValue);
         // code above works fine
-        if (this.state.currentValue === this.state.randomNumber) {
+        if (this.state.currentValue === this.state.targetNumber) {
             this.setState(
-                {gamesWon: this.state.gamesWon + 1}
+                {
+                  targetNumber: this.targetNumber(19, 120),
+                  gamesWon: this.state.gamesWon + 1
+                }
             )
         }
         else {
-            if (this.state.currentValue >= this.state.randomNumber) {
+            if (this.state.currentValue >= this.state.targetNumber) {
                 this.setState(
                     {gamesWon: this.state.gamesWon - 1}
                 )
@@ -41,7 +51,8 @@ class App extends Component {
       <div className="App">
 
       <div className="randomNumber">
-        <RandomNumber />
+        {/* <RandomNumber /> */}
+        Target number = {this.state.targetNumber}
 
         <div className="currentValue">
             Current value = {this.state.currentValue}
