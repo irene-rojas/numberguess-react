@@ -19,8 +19,7 @@ class RandomNumber extends Component {
       componentDidMount() {
           this.generateNumber(19, 120)
       }  
-      
-
+    
       render() {
         return (
           <div className="generator">
@@ -29,6 +28,5 @@ class RandomNumber extends Component {
         );
       }
     }
-
   
 export default RandomNumber;
