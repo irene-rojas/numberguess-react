@@ -26,7 +26,6 @@ class App extends Component {
             {currentValue: currentValue + newValue}
         )
         // console.log(newValue);
-        // code above works fine
     }
 
     componentDidUpdate() {
@@ -64,29 +63,27 @@ class App extends Component {
 
       <div className="App">
 
-      <img src={require("./images/frame.png")} alt="frame" id="instructFrame" />
+        <img src={require("./images/frame.png")} alt="frame" id="instructFrame" />
 
-      <div className="resultsDiv">
+        <div className="resultsDiv">
 
-        <div className="targetNumber">
-          Target number = {this.state.targetNumber}
+          <div className="targetNumber">
+            Target number = {this.state.targetNumber}
+          </div>
+
+          <div className="currentValue">
+              Current value = {this.state.currentValue}
+          </div>
+        
+          <div className="gamesWon">
+              Games won = {this.state.gamesWon}
+          </div>
+
         </div>
-
-        <div className="currentValue">
-            Current value = {this.state.currentValue}
-        </div>
-      
-        <div className="gamesWon">
-            Games won = {this.state.gamesWon}
-        </div>
-
-      </div>
 
         <div className="buttonGrid">
             <Buttons onClick={this.handleClick} />
         </div>
-
-      
 
       </div>
     );
