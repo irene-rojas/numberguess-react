@@ -29,5 +29,10 @@
   background-color: white;
 }
 
-
+#instructFrame {
+  width: 250px;
+  object-fit: contain;
+  text-align: center;
+  padding-left: 50px;
+}
 /* <a href='https://www.freepik.com/free-vector/realistic-black-frame_1021288.htm'>Designed by Harryarts</a> */

@@ -78,7 +78,7 @@ class App extends Component {
             <Buttons onClick={this.handleClick} />
         </div>
 
-        <img src={require("./images/frame.png")} alt="picture frame" />
+        <img src={require("./images/frame.png")} alt="frame" id="instructFrame" />
 
       </div>
     );
