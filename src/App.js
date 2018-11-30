@@ -26,6 +26,9 @@ class App extends Component {
             {currentValue: currentValue + newValue}
         )
         // console.log(newValue);
+        return (
+          <Buttons />
+        )
     }
 
     componentDidUpdate() {
