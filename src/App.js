@@ -26,9 +26,6 @@ class App extends Component {
             {currentValue: currentValue + newValue}
         )
         // console.log(newValue);
-        return (
-          <Buttons />
-        )
     }
 
     componentDidUpdate() {
@@ -40,9 +37,6 @@ class App extends Component {
               gamesWon: this.state.gamesWon + 1
             }
         )
-          return (
-            <Buttons />
-          )
       }
       else {
           if (this.state.currentValue >= this.state.targetNumber) {
@@ -53,12 +47,10 @@ class App extends Component {
                     gamesWon: this.state.gamesWon
                   }
               )
-              return (
-                <Buttons />
-              )
           }
       }
     }
+
 
 
   render() {

@@ -55,7 +55,7 @@ class Buttons extends Component {
                           src={button.src}
                           alt={button.alt}
                           value={button.value}
-                          onClick={this.props.onClick}
+                          onClick={this.props.onClick.bind(this)}
                         />
                     )
                 })}
