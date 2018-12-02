@@ -7,10 +7,11 @@ class App extends Component {
 
   targetNumber = (min, max) => {
     const targetNum = Math.floor(Math.random()*(max-min+1)+min);
-    console.log(targetNum);
+    // console.log(`Target number = ${targetNum}`);
 
     return targetNum
   };
+
 
   state = {
     targetNumber: this.targetNumber(19, 120),
@@ -28,28 +29,29 @@ class App extends Component {
         // console.log(newValue);
     }
 
-    componentDidUpdate() {
-      if (this.state.currentValue === this.state.targetNumber) {
-        this.setState(
-            {
-              targetNumber: this.targetNumber(19, 120),
-              currentValue: 0,
-              gamesWon: this.state.gamesWon + 1
-            }
-        )
-      }
-      else {
-          if (this.state.currentValue >= this.state.targetNumber) {
-              this.setState(
-                  {
-                    targetNumber: this.targetNumber(19, 120),
-                    currentValue: 0,
-                    gamesWon: this.state.gamesWon
-                  }
-              )
+
+  componentDidUpdate() {
+    if (this.state.currentValue === this.state.targetNumber) {
+      this.setState(
+          {
+            targetNumber: this.targetNumber(19, 120),
+            currentValue: 0,
+            gamesWon: this.state.gamesWon + 1
           }
-      }
+      )
     }
+    else {
+        if (this.state.currentValue >= this.state.targetNumber) {
+            this.setState(
+                {
+                  targetNumber: this.targetNumber(19, 120),
+                  currentValue: 0,
+                  gamesWon: this.state.gamesWon,
+                }
+            );
+        }
+    }
+  }
 
 
 
@@ -77,7 +79,10 @@ class App extends Component {
         </div>
 
         <div className="buttonGrid">
-            <Buttons onClick={this.handleClick} />
+            <Buttons
+                key={this.state.targetNumber} 
+                onClick={this.handleClick} 
+            />
         </div>
 
       </div>

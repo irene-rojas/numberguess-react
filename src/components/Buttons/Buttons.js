@@ -10,7 +10,7 @@ class Buttons extends Component {
 
     generateNumber = (min, max) => {
         const rndNumBtn = Math.floor(Math.random()*(max-min+1)+min);
-        console.log(rndNumBtn);
+        // console.log(rndNumBtn);
         return rndNumBtn
       };
 
