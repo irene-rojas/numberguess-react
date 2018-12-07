@@ -6,13 +6,14 @@ const Button = (props) => {
 
   return (
 
-    <button className="zoom">
-      <img
-        src={props.src}
-        alt={props.alt}
-        value={props.value}
-        onClick={props.onClick}
-      />
+    <button 
+        className="zoom"
+        onClick={props.onClick}>
+            <img
+                src={props.src}
+                alt={props.alt}
+                value={props.value}
+            />
     </button>
   )
 
