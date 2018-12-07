@@ -6,7 +6,7 @@ const Button = (props) => {
 
   return (
 
-    <button 
+    <div 
         className="zoom"
         onClick={props.onClick}>
             <img
@@ -14,7 +14,7 @@ const Button = (props) => {
                 alt={props.alt}
                 value={props.value}
             />
-    </button>
+    </div>
   )
 
 }
