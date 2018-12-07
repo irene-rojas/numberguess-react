@@ -5,16 +5,15 @@ import "./Button.css";
 const Button = (props) => {
 
   return (
-
-    <div 
+        
+    <img
+        src={props.src}
+        alt={props.alt}
+        value={props.value}
         className="zoom"
-        onClick={props.onClick}>
-            <img
-                src={props.src}
-                alt={props.alt}
-                value={props.value}
-            />
-    </div>
+        onClick={props.onClick}
+    />
+    
   )
 
 }
