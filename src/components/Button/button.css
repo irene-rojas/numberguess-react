@@ -1,7 +1,15 @@
 img {
+    width: 100px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+@media (min-width: 1025px) {
+img {
     width: 125px;
     padding-left: 5px;
     padding-right: 5px;
+}
 }
 
 div {
