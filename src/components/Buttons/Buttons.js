@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Button from "../Button/Button";
+import Button from "../Button/Button.js";
 import black from "../Button/images/black_cat.png";
 import brown from "../Button/images/brown_cat.png";
 import gray from "../Button/images/gray_cat.png";
