@@ -1,0 +1,24 @@
+body {
+    margin: 0 auto;
+    background-image: url("./couch.jpg");
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Avenir Next";
+    /* font-weight: bold; */
+}
+
+/* .parallax {
+    height: 100vh;
+    background-image: url("./couch.jpg");
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+
+/* <a href='https://www.freepik.com/free-vector/living-room-with-beautiful-views_801342.htm'>Designed by Freepik</a> */
